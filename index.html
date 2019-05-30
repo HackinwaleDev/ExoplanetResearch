@@ -6,14 +6,63 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Exoplanet Research</title>
     <!-- Referencing the Bootstrap CSS used here -->
-
+    <link rel="stylesheet" href="lib/bootstrap.min.css">
+    <!-- Custom style to handle the margin -->
+    <style>
+        .top-buffer { margin-top:10px; }
+    </style>
 </head>
 <body>
 <!-- A simple layout of the interface to host the visualizations -->
-    
+    <div class="container">
+        <!-- main-panel begins -->
+        <div class="main">
+            <!-- Bar chart -->
+            <div class="row top-buffer">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="goal-metric-container">
+                                <div class="d-flex align-items-center">
+                                    <div id="planet-bar"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <span class="icon-footer-label center-item font-weight-normal">Planets discovered per year</span>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+            <!-- Bubble chart -->
+            <div class="row top-buffer">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="goal-metric-container">
+                                <div class="d-flex align-items-center">
+                                    <div id="planet-bubble"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <span class="icon-footer-label center-item font-weight-normal">Planets and Features</span>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div>
+        <!-- main-panel ends -->
+    </div>    
 </body>
-<footer>
+<footer class="footer">
     <!-- Referencing the JavaScript file used for this project here -->
-
+    <script src="lib/d3.min.js"></script>
+    <script src="lib/jquery-2.1.4.min.js"></script>
+    <script src="exoplanet.js"></script>
 </footer>
 </html>
